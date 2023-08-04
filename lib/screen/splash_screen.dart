@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sneakers_dept/themes/color_themes.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -6,8 +7,12 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColor.grey1Color(),
       body: Center(
-        child: Text('Splash'),
+        child: Image.asset(
+          'assets/logo.png',
+          width: 100,
+        ),
       ),
     );
   }
