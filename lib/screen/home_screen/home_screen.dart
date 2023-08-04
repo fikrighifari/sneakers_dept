@@ -33,15 +33,48 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
 
               //Filter
-              Container(
-                width: 80,
-                height: 40,
-                color: AppColor.secondaryColor(),
-                child: Center(
-                  child: Text(
-                    'Running',
+              Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.symmetric(
+                      horizontal: 10,
+                    ),
+                    width: 80,
+                    height: 40,
+                    color: AppColor.priceColor(),
+                    child: Center(
+                      child: Text(
+                        'All Shoes',
+                      ),
+                    ),
                   ),
-                ),
+                  Container(
+                    margin: EdgeInsets.symmetric(
+                      horizontal: 10,
+                    ),
+                    width: 80,
+                    height: 40,
+                    color: AppColor.grey1Color(),
+                    child: Center(
+                      child: Text(
+                        'Running',
+                      ),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.symmetric(
+                      horizontal: 10,
+                    ),
+                    width: 80,
+                    height: 40,
+                    color: AppColor.grey1Color(),
+                    child: Center(
+                      child: Text(
+                        'Training',
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
