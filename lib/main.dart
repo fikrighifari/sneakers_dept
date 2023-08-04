@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sneakers_dept/screen/home%20screen/home_screen.dart';
 import 'package:sneakers_dept/screen/splash_screen.dart';
 
 void main() {
@@ -10,12 +11,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: SplashScreen());
+    return const MaterialApp(
+      title: 'Sneakers Dept',
+      home: SplashScreen(),
+    );
   }
 }
