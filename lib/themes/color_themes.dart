@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:sneakers_dept/export.dart';
 
 class AppColor {
   //Core Color

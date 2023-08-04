@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers_dept/screen/home%20screen/home_screen.dart';
-import 'package:sneakers_dept/screen/splash_screen.dart';
+import 'package:sneakers_dept/screen/screen.dart';
 
 void main() {
   runApp(const MyApp());

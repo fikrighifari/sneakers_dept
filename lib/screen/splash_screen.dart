@@ -1,8 +1,4 @@
-import 'dart:async';
-
-import 'package:flutter/material.dart';
-import 'package:sneakers_dept/screen/home%20screen/home_screen.dart';
-import 'package:sneakers_dept/themes/color_themes.dart';
+part of 'screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
