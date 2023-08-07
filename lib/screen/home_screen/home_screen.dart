@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sneakers_dept/themes/color_themes.dart';
+import 'package:sneakers_dept/themes/themes.dart';
 import 'package:sneakers_dept/widgets/reusable_components/reusable_components.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -88,9 +89,88 @@ class _HomeScreenState extends State<HomeScreen> {
                     Icons.cloud,
                     size: 120,
                   ),
-                  Text('Hyderabad'),
-                  Text('31'),
+                  Text(
+                    'Hyderabad',
+                    style: mainInfoTextStyle,
+                  ),
+                  Text(
+                    '31°',
+                    style: mainInfoTextStyle.copyWith(
+                      fontSize: 70,
+                    ),
+                  ),
                 ],
+              ),
+              CustomContainer(
+                padding: EdgeInsets.symmetric(
+                  horizontal: defaultMargin,
+                  vertical: defaultMargin,
+                ),
+                containerType: RoundedContainerType.noOutline,
+                radius: defaultRadius,
+                backgroundColor: AppColor.grey4Color(),
+                width: double.infinity,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      children: [
+                        Text(
+                          'TIME',
+                          style: defaultTextStyle,
+                        ),
+                        Text(
+                          '11:25 AM',
+                          style: defaultTextStyle.copyWith(
+                            fontWeight: boldWeight,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          'UV',
+                          style: defaultTextStyle,
+                        ),
+                        Text(
+                          '4',
+                          style: defaultTextStyle.copyWith(
+                            fontWeight: boldWeight,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          '% RAIN',
+                          style: defaultTextStyle,
+                        ),
+                        Text(
+                          '58 %',
+                          style: defaultTextStyle.copyWith(
+                            fontWeight: boldWeight,
+                          ),
+                        ),
+                      ],
+                    ),
+                    Column(
+                      children: [
+                        Text(
+                          'AQ',
+                          style: defaultTextStyle,
+                        ),
+                        Text(
+                          '22',
+                          style: defaultTextStyle.copyWith(
+                            fontWeight: boldWeight,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               )
             ],
           ),

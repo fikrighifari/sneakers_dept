@@ -14,7 +14,13 @@ FontWeight blackWeight = FontWeight.w900;
 
 //Text Style
 TextStyle defaultTextStyle = GoogleFonts.poppins().copyWith(
-  fontSize: 14,
+  fontSize: 12,
   color: AppColor.blackColor(),
   fontWeight: regularWeight,
+);
+
+TextStyle mainInfoTextStyle = GoogleFonts.poppins().copyWith(
+  fontSize: 30,
+  color: AppColor.blackColor(),
+  fontWeight: semiBoldWeight,
 );
