@@ -57,8 +57,8 @@ class CustomTextField extends StatelessWidget {
         ),
         Container(
           decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(4),
-            color: backgroundColor ?? AppColor.whiteColor(),
+            borderRadius: BorderRadius.circular(15),
+            color: backgroundColor ?? AppColor.grey4Color(),
           ),
           child: TextField(
             controller: controller,
@@ -73,13 +73,13 @@ class CustomTextField extends StatelessWidget {
               labelStyle: TextStyle(color: AppColor.grey2Color()),
               errorText: null,
               enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(4),
+                borderRadius: BorderRadius.circular(15),
                 borderSide: BorderSide(
                   color: AppColor.grey1Color(),
                 ),
               ),
               border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(4),
+                borderRadius: BorderRadius.circular(15),
               ),
               contentPadding: padding ??
                   const EdgeInsets.symmetric(horizontal: 16).copyWith(
@@ -97,7 +97,7 @@ class CustomTextField extends StatelessWidget {
                   color: AppColor.secondaryColor(),
                   width: 1.0,
                 ),
-                borderRadius: BorderRadius.circular(4),
+                borderRadius: BorderRadius.circular(15),
               ),
             ),
             cursorColor: Colors.grey,
@@ -294,7 +294,7 @@ class OutlineTextField extends StatelessWidget {
         maxLine: maxline,
         minLine: minline,
         margin: margin ?? const EdgeInsets.only(bottom: 12),
-        backgroundColor: AppColor.whiteColor(),
+        backgroundColor: AppColor.grey4Color(),
         // textLabelColor: AppColor.primayRedColor,
         labelText: label,
         suffixIcon: suffixIcon,

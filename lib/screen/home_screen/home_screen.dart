@@ -13,71 +13,85 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.grey1Color(),
+      backgroundColor: AppColor.whiteColor(),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(30),
           child: Column(
             children: [
               //Header
-              const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    children: [
-                      Text('Hallo, Alex'),
-                      Text('@alexkeinn'),
-                    ],
-                  ),
-                  CircleAvatar()
-                ],
-              ),
+              // const Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     Column(
+              //       children: [
+              //         Text('Hallo, Alex'),
+              //         Text('@alexkeinn'),
+              //       ],
+              //     ),
+              //     CircleAvatar()
+              //   ],
+              // ),
 
               //Filter
-              Row(
-                children: [
-                  Container(
-                    margin: EdgeInsets.symmetric(
-                      horizontal: 10,
-                    ),
-                    width: 80,
-                    height: 40,
-                    color: AppColor.priceColor(),
-                    child: Center(
-                      child: Text(
-                        'All Shoes',
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(
-                      horizontal: 10,
-                    ),
-                    width: 80,
-                    height: 40,
-                    color: AppColor.grey1Color(),
-                    child: Center(
-                      child: Text(
-                        'Running',
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.symmetric(
-                      horizontal: 10,
-                    ),
-                    width: 80,
-                    height: 40,
-                    color: AppColor.grey1Color(),
-                    child: Center(
-                      child: Text(
-                        'Training',
-                      ),
-                    ),
-                  ),
-                ],
+              // Row(
+              //   children: [
+              //     Container(
+              //       margin: EdgeInsets.symmetric(
+              //         horizontal: 10,
+              //       ),
+              //       width: 80,
+              //       height: 40,
+              //       color: AppColor.priceColor(),
+              //       child: Center(
+              //         child: Text(
+              //           'All Shoes',
+              //         ),
+              //       ),
+              //     ),
+              //     Container(
+              //       margin: EdgeInsets.symmetric(
+              //         horizontal: 10,
+              //       ),
+              //       width: 80,
+              //       height: 40,
+              //       color: AppColor.grey1Color(),
+              //       child: Center(
+              //         child: Text(
+              //           'Running',
+              //         ),
+              //       ),
+              //     ),
+              //     Container(
+              //       margin: EdgeInsets.symmetric(
+              //         horizontal: 10,
+              //       ),
+              //       width: 80,
+              //       height: 40,
+              //       color: AppColor.grey1Color(),
+              //       child: Center(
+              //         child: Text(
+              //           'Training',
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // ),
+              CustomTextField(
+                backgroundColor: AppColor.grey4Color(),
+                hintText: 'Search Location',
+                suffixIcon: Icon(Icons.search),
               ),
-              CustomTextField()
+              Column(
+                children: [
+                  Icon(
+                    Icons.cloud,
+                    size: 120,
+                  ),
+                  Text('Hyderabad'),
+                  Text('31'),
+                ],
+              )
             ],
           ),
         ),
