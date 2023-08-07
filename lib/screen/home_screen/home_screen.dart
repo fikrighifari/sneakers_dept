@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sneakers_dept/themes/color_themes.dart';
+import 'package:sneakers_dept/widgets/reusable_components/reusable_components.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -76,6 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                 ],
               ),
+              CustomTextField()
             ],
           ),
         ),
