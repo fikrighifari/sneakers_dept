@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 2, vsync: this);
+    _tabController = TabController(length: 4, vsync: this);
   }
 
   @override
@@ -32,264 +32,306 @@ class _HomeScreenState extends State<HomeScreen>
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(30),
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                //Header
-                // const Row(
-                //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                //   children: [
-                //     Column(
-                //       children: [
-                //         Text('Hallo, Alex'),
-                //         Text('@alexkeinn'),
-                //       ],
-                //     ),
-                //     CircleAvatar()
-                //   ],
-                // ),
+          child: Column(
+            children: [
+              //Header
+              // const Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     Column(
+              //       children: [
+              //         Text('Hallo, Alex'),
+              //         Text('@alexkeinn'),
+              //       ],
+              //     ),
+              //     CircleAvatar()
+              //   ],
+              // ),
 
-                //Filter
-                // Row(
-                //   children: [
-                //     Container(
-                //       margin: EdgeInsets.symmetric(
-                //         horizontal: 10,
-                //       ),
-                //       width: 80,
-                //       height: 40,
-                //       color: AppColor.priceColor(),
-                //       child: Center(
-                //         child: Text(
-                //           'All Shoes',
-                //         ),
-                //       ),
-                //     ),
-                //     Container(
-                //       margin: EdgeInsets.symmetric(
-                //         horizontal: 10,
-                //       ),
-                //       width: 80,
-                //       height: 40,
-                //       color: AppColor.grey1Color(),
-                //       child: Center(
-                //         child: Text(
-                //           'Running',
-                //         ),
-                //       ),
-                //     ),
-                //     Container(
-                //       margin: EdgeInsets.symmetric(
-                //         horizontal: 10,
-                //       ),
-                //       width: 80,
-                //       height: 40,
-                //       color: AppColor.grey1Color(),
-                //       child: Center(
-                //         child: Text(
-                //           'Training',
-                //         ),
-                //       ),
-                //     ),
-                //   ],
-                // ),
-                CustomTextField(
-                  backgroundColor: AppColor.grey4Color(),
-                  hintText: 'Search Movie',
-                  suffixIcon: Icon(Icons.search),
-                ),
-                Column(
-                  children: [
-                    SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(16),
-                            child: CustomContainer(
-                              backgroundColor: AppColor.blackColor(),
-                              containerType: RoundedContainerType.noOutline,
-                              height: 214,
-                              child: Image.asset('assets/images/image1.jpeg'),
-                            ),
+              //Filter
+              // Row(
+              //   children: [
+              //     Container(
+              //       margin: EdgeInsets.symmetric(
+              //         horizontal: 10,
+              //       ),
+              //       width: 80,
+              //       height: 40,
+              //       color: AppColor.priceColor(),
+              //       child: Center(
+              //         child: Text(
+              //           'All Shoes',
+              //         ),
+              //       ),
+              //     ),
+              //     Container(
+              //       margin: EdgeInsets.symmetric(
+              //         horizontal: 10,
+              //       ),
+              //       width: 80,
+              //       height: 40,
+              //       color: AppColor.grey1Color(),
+              //       child: Center(
+              //         child: Text(
+              //           'Running',
+              //         ),
+              //       ),
+              //     ),
+              //     Container(
+              //       margin: EdgeInsets.symmetric(
+              //         horizontal: 10,
+              //       ),
+              //       width: 80,
+              //       height: 40,
+              //       color: AppColor.grey1Color(),
+              //       child: Center(
+              //         child: Text(
+              //           'Training',
+              //         ),
+              //       ),
+              //     ),
+              //   ],
+              // ),
+              CustomTextField(
+                backgroundColor: AppColor.grey4Color(),
+                hintText: 'Search Movie',
+                suffixIcon: Icon(Icons.search),
+              ),
+              Column(
+                children: [
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: CustomContainer(
+                            backgroundColor: AppColor.blackColor(),
+                            containerType: RoundedContainerType.noOutline,
+                            height: 214,
+                            child: Image.asset('assets/images/image1.jpeg'),
                           ),
-                          SizedBox(
-                            width: defaultMargin,
+                        ),
+                        SizedBox(
+                          width: defaultMargin,
+                        ),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: CustomContainer(
+                            backgroundColor: AppColor.blackColor(),
+                            containerType: RoundedContainerType.noOutline,
+                            height: 214,
+                            child: Image.asset('assets/images/image1.jpeg'),
                           ),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(16),
-                            child: CustomContainer(
-                              backgroundColor: AppColor.blackColor(),
-                              containerType: RoundedContainerType.noOutline,
-                              height: 214,
-                              child: Image.asset('assets/images/image1.jpeg'),
-                            ),
+                        ),
+                        SizedBox(
+                          width: defaultMargin,
+                        ),
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: CustomContainer(
+                            backgroundColor: AppColor.blackColor(),
+                            containerType: RoundedContainerType.noOutline,
+                            height: 214,
+                            child: Image.asset('assets/images/image1.jpeg'),
                           ),
-                          SizedBox(
-                            width: defaultMargin,
-                          ),
-                          ClipRRect(
-                            borderRadius: BorderRadius.circular(16),
-                            child: CustomContainer(
-                              backgroundColor: AppColor.blackColor(),
-                              containerType: RoundedContainerType.noOutline,
-                              height: 214,
-                              child: Image.asset('assets/images/image1.jpeg'),
-                            ),
-                          ),
-                          SizedBox(
-                            width: defaultMargin,
-                          ),
-                        ],
+                        ),
+                        SizedBox(
+                          width: defaultMargin,
+                        ),
+                      ],
+                    ),
+                  ),
+                  // Icon(
+                  //   Icons.cloud,
+                  //   size: 120,
+                  // ),
+                  // Text(
+                  //   'Hyderabad',
+                  //   style: mainInfoTextStyle,
+                  // ),
+                  // Text(
+                  //   '31°',
+                  //   style: mainInfoTextStyle.copyWith(
+                  //     fontSize: 70,
+                  //   ),
+                  // ),
+                ],
+              ),
+              // CustomContainer(
+              //   padding: EdgeInsets.symmetric(
+              //     horizontal: defaultMargin,
+              //     vertical: defaultMargin,
+              //   ),
+              //   containerType: RoundedContainerType.noOutline,
+              //   radius: defaultRadius,
+              //   backgroundColor: AppColor.grey4Color(),
+              //   width: double.infinity,
+              //   child: Row(
+              //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //     children: [
+              //       Column(
+              //         children: [
+              //           Text(
+              //             'TIME',
+              //             style: defaultTextStyle,
+              //           ),
+              //           Text(
+              //             '11:25 AM',
+              //             style: defaultTextStyle.copyWith(
+              //               fontWeight: boldWeight,
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //       Column(
+              //         children: [
+              //           Text(
+              //             'UV',
+              //             style: defaultTextStyle,
+              //           ),
+              //           Text(
+              //             '4',
+              //             style: defaultTextStyle.copyWith(
+              //               fontWeight: boldWeight,
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //       Column(
+              //         children: [
+              //           Text(
+              //             '% RAIN',
+              //             style: defaultTextStyle,
+              //           ),
+              //           Text(
+              //             '58 %',
+              //             style: defaultTextStyle.copyWith(
+              //               fontWeight: boldWeight,
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //       Column(
+              //         children: [
+              //           Text(
+              //             'AQ',
+              //             style: defaultTextStyle,
+              //           ),
+              //           Text(
+              //             '22',
+              //             style: defaultTextStyle.copyWith(
+              //               fontWeight: boldWeight,
+              //             ),
+              //           ),
+              //         ],
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              Container(
+                color: AppColor.backgroundColor4(),
+                child: TabBar(
+                  isScrollable: true,
+                  indicatorColor: AppColor.primaryColor(),
+                  controller: _tabController,
+                  tabs: [
+                    Tab(
+                      child: Text(
+                        'Now Playing',
+                        style: defaultTextStyle.copyWith(
+                          color: AppColor.whiteColor(),
+                        ),
                       ),
                     ),
-                    // Icon(
-                    //   Icons.cloud,
-                    //   size: 120,
-                    // ),
-                    // Text(
-                    //   'Hyderabad',
-                    //   style: mainInfoTextStyle,
-                    // ),
-                    // Text(
-                    //   '31°',
-                    //   style: mainInfoTextStyle.copyWith(
-                    //     fontSize: 70,
-                    //   ),
-                    // ),
+                    Tab(
+                      child: Text(
+                        'Upcoming',
+                        style: defaultTextStyle.copyWith(
+                          color: AppColor.whiteColor(),
+                        ),
+                      ),
+                    ),
+                    Tab(
+                      child: Text(
+                        'Top Rated',
+                        style: defaultTextStyle.copyWith(
+                          color: AppColor.whiteColor(),
+                        ),
+                      ),
+                    ),
+                    Tab(
+                      child: Text(
+                        'Popular',
+                        style: defaultTextStyle.copyWith(
+                          color: AppColor.whiteColor(),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
-                CustomContainer(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: defaultMargin,
-                    vertical: defaultMargin,
-                  ),
-                  containerType: RoundedContainerType.noOutline,
-                  radius: defaultRadius,
-                  backgroundColor: AppColor.grey4Color(),
-                  width: double.infinity,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        children: [
-                          Text(
-                            'TIME',
-                            style: defaultTextStyle,
-                          ),
-                          Text(
-                            '11:25 AM',
-                            style: defaultTextStyle.copyWith(
-                              fontWeight: boldWeight,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            'UV',
-                            style: defaultTextStyle,
-                          ),
-                          Text(
-                            '4',
-                            style: defaultTextStyle.copyWith(
-                              fontWeight: boldWeight,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            '% RAIN',
-                            style: defaultTextStyle,
-                          ),
-                          Text(
-                            '58 %',
-                            style: defaultTextStyle.copyWith(
-                              fontWeight: boldWeight,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Text(
-                            'AQ',
-                            style: defaultTextStyle,
-                          ),
-                          Text(
-                            '22',
-                            style: defaultTextStyle.copyWith(
-                              fontWeight: boldWeight,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+              ),
+              Expanded(
+                child: TabBarView(
+                  controller: _tabController,
+                  children: const [
+                    TabNowPlayingScreen(),
+                    TabNowPlayingScreen(),
+                    TabNowPlayingScreen(),
+                    TabNowPlayingScreen(),
+                  ],
                 ),
-                Container(
-                  color: AppColor.backgroundColor4(),
-                  child: TabBar(
-                    indicatorColor: AppColor.primaryColor(),
-                    controller: _tabController,
-                    tabs: [
-                      Tab(
-                        child: Text(
-                          'Now Playing',
-                          style: defaultTextStyle.copyWith(
-                            color: AppColor.whiteColor(),
-                          ),
-                        ),
-                      ),
-                      Tab(
-                        child: Text(
-                          'Trending',
-                          style: defaultTextStyle.copyWith(
-                            color: AppColor.whiteColor(),
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
+              ),
+              SizedBox(
+                height: defaultMargin,
+              ),
+              CustomContainer(
+                padding: EdgeInsets.symmetric(
+                  horizontal: defaultMargin,
+                  vertical: defaultMargin,
                 ),
-                CustomContainer(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: defaultMargin,
-                    vertical: defaultMargin,
-                  ),
-                  containerType: RoundedContainerType.noOutline,
-                  radius: defaultRadius,
-                  backgroundColor: AppColor.grey4Color(),
-                  width: double.infinity,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'SUNRISE & SUNSET',
-                        style: defaultTextStyle,
-                      ),
-                      // Image.asset(
-                      //   'assets/logo.png',
-                      //   width: 200,
-                      // ),
-                      Text(
-                        'Length of day: 13H 12M',
-                        style: defaultTextStyle,
-                      ),
-                      Text(
-                        'Remaining daylight: 9H 22M',
-                        style: defaultTextStyle,
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            ),
+                containerType: RoundedContainerType.noOutline,
+                radius: defaultRadius,
+                backgroundColor: AppColor.grey4Color(),
+                width: double.infinity,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'SUNRISE & SUNSET',
+                      style: defaultTextStyle,
+                    ),
+                    // Image.asset(
+                    //   'assets/logo.png',
+                    //   width: 200,
+                    // ),
+                    Text(
+                      'Length of day: 13H 12M',
+                      style: defaultTextStyle,
+                    ),
+                    Text(
+                      'Remaining daylight: 9H 22M',
+                      style: defaultTextStyle,
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class TabNowPlayingScreen extends StatelessWidget {
+  const TabNowPlayingScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child: Text(
+        '🐌🦄🦊🐸',
       ),
     );
   }
