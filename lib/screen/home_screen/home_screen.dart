@@ -81,25 +81,68 @@ class _HomeScreenState extends State<HomeScreen> {
                 // ),
                 CustomTextField(
                   backgroundColor: AppColor.grey4Color(),
-                  hintText: 'Search Location',
+                  hintText: 'Search Movie',
                   suffixIcon: Icon(Icons.search),
                 ),
                 Column(
                   children: [
-                    Icon(
-                      Icons.cloud,
-                      size: 120,
-                    ),
-                    Text(
-                      'Hyderabad',
-                      style: mainInfoTextStyle,
-                    ),
-                    Text(
-                      '31°',
-                      style: mainInfoTextStyle.copyWith(
-                        fontSize: 70,
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(16),
+                            child: CustomContainer(
+                              backgroundColor: AppColor.blackColor(),
+                              containerType: RoundedContainerType.noOutline,
+                              height: 214,
+                              child: Image.asset('assets/images/image1.jpeg'),
+                            ),
+                          ),
+                          SizedBox(
+                            width: defaultMargin,
+                          ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(16),
+                            child: CustomContainer(
+                              backgroundColor: AppColor.blackColor(),
+                              containerType: RoundedContainerType.noOutline,
+                              height: 214,
+                              child: Image.asset('assets/images/image1.jpeg'),
+                            ),
+                          ),
+                          SizedBox(
+                            width: defaultMargin,
+                          ),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(16),
+                            child: CustomContainer(
+                              backgroundColor: AppColor.blackColor(),
+                              containerType: RoundedContainerType.noOutline,
+                              height: 214,
+                              child: Image.asset('assets/images/image1.jpeg'),
+                            ),
+                          ),
+                          SizedBox(
+                            width: defaultMargin,
+                          ),
+                        ],
                       ),
                     ),
+                    // Icon(
+                    //   Icons.cloud,
+                    //   size: 120,
+                    // ),
+                    // Text(
+                    //   'Hyderabad',
+                    //   style: mainInfoTextStyle,
+                    // ),
+                    // Text(
+                    //   '31°',
+                    //   style: mainInfoTextStyle.copyWith(
+                    //     fontSize: 70,
+                    //   ),
+                    // ),
                   ],
                 ),
                 CustomContainer(
@@ -189,10 +232,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         'SUNRISE & SUNSET',
                         style: defaultTextStyle,
                       ),
-                      Image.asset(
-                        'assets/logo.png',
-                        width: 200,
-                      ),
+                      // Image.asset(
+                      //   'assets/logo.png',
+                      //   width: 200,
+                      // ),
                       Text(
                         'Length of day: 13H 12M',
                         style: defaultTextStyle,
