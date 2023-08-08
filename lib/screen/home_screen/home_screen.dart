@@ -10,11 +10,25 @@ class HomeScreen extends StatefulWidget {
   State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen>
+    with SingleTickerProviderStateMixin {
+  late TabController _tabController;
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 2, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.whiteColor(),
+      backgroundColor: AppColor.backgroundColor4(),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(30),
@@ -212,6 +226,31 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                         ],
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  color: AppColor.backgroundColor4(),
+                  child: TabBar(
+                    indicatorColor: AppColor.primaryColor(),
+                    controller: _tabController,
+                    tabs: [
+                      Tab(
+                        child: Text(
+                          'Now Playing',
+                          style: defaultTextStyle.copyWith(
+                            color: AppColor.whiteColor(),
+                          ),
+                        ),
+                      ),
+                      Tab(
+                        child: Text(
+                          'Trending',
+                          style: defaultTextStyle.copyWith(
+                            color: AppColor.whiteColor(),
+                          ),
+                        ),
                       ),
                     ],
                   ),

@@ -9,6 +9,7 @@ class AppColor {
   static Color backgroundColor1() => const Color(0xff1F1D2B);
   static Color backgroundColor2() => const Color(0xff2B2937);
   static Color backgroundColor3() => const Color(0xff242231);
+  static Color backgroundColor4() => const Color(0xff1E1E1E);
   static Color primaryTextColor() => const Color(0xffE1E1E1);
   static Color secondaryTextColor() => const Color(0xff999999);
 
