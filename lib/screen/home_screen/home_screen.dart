@@ -13,6 +13,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
+  int? currentIndex = 0;
   @override
   void initState() {
     super.initState();
@@ -25,9 +26,31 @@ class _HomeScreenState extends State<HomeScreen>
     super.dispose();
   }
 
+  customBottomNavBar() {
+    return BottomNavigationBar(
+        selectedItemColor: AppColor.priceColor(),
+        unselectedItemColor: AppColor.whiteColor(),
+        currentIndex: currentIndex!,
+        onTap: (value) {},
+        type: BottomNavigationBarType.fixed,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.ac_unit),
+            activeIcon: Icon(Icons.ac_unit),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.ac_unit),
+            activeIcon: Icon(Icons.ac_unit),
+            label: 'Wew',
+          ),
+        ]);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: customBottomNavBar(),
       backgroundColor: AppColor.backgroundColor4(),
       body: SafeArea(
         child: Padding(
@@ -285,37 +308,37 @@ class _HomeScreenState extends State<HomeScreen>
               SizedBox(
                 height: defaultMargin,
               ),
-              CustomContainer(
-                padding: EdgeInsets.symmetric(
-                  horizontal: defaultMargin,
-                  vertical: defaultMargin,
-                ),
-                containerType: RoundedContainerType.noOutline,
-                radius: defaultRadius,
-                backgroundColor: AppColor.grey4Color(),
-                width: double.infinity,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'SUNRISE & SUNSET',
-                      style: defaultTextStyle,
-                    ),
-                    // Image.asset(
-                    //   'assets/logo.png',
-                    //   width: 200,
-                    // ),
-                    Text(
-                      'Length of day: 13H 12M',
-                      style: defaultTextStyle,
-                    ),
-                    Text(
-                      'Remaining daylight: 9H 22M',
-                      style: defaultTextStyle,
-                    ),
-                  ],
-                ),
-              ),
+              // CustomContainer(
+              //   padding: EdgeInsets.symmetric(
+              //     horizontal: defaultMargin,
+              //     vertical: defaultMargin,
+              //   ),
+              //   containerType: RoundedContainerType.noOutline,
+              //   radius: defaultRadius,
+              //   backgroundColor: AppColor.grey4Color(),
+              //   width: double.infinity,
+              //   child: Column(
+              //     crossAxisAlignment: CrossAxisAlignment.start,
+              //     children: [
+              //       Text(
+              //         'SUNRISE & SUNSET',
+              //         style: defaultTextStyle,
+              //       ),
+              //       // Image.asset(
+              //       //   'assets/logo.png',
+              //       //   width: 200,
+              //       // ),
+              //       Text(
+              //         'Length of day: 13H 12M',
+              //         style: defaultTextStyle,
+              //       ),
+              //       Text(
+              //         'Remaining daylight: 9H 22M',
+              //         style: defaultTextStyle,
+              //       ),
+              //     ],
+              //   ),
+              // ),
             ],
           ),
         ),
