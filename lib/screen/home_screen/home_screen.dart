@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sneakers_dept/themes/color_themes.dart';
 import 'package:sneakers_dept/themes/themes.dart';
+import 'package:sneakers_dept/widgets/cards/movie_card.dart';
 import 'package:sneakers_dept/widgets/reusable_components/reusable_components.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -139,39 +140,15 @@ class _HomeScreenState extends State<HomeScreen>
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(16),
-                          child: CustomContainer(
-                            backgroundColor: AppColor.blackColor(),
-                            containerType: RoundedContainerType.noOutline,
-                            height: 214,
-                            child: Image.asset('assets/images/image1.jpeg'),
-                          ),
-                        ),
+                        MovieCard(imageFileName: 'image3'),
                         SizedBox(
                           width: defaultMargin,
                         ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(16),
-                          child: CustomContainer(
-                            backgroundColor: AppColor.blackColor(),
-                            containerType: RoundedContainerType.noOutline,
-                            height: 214,
-                            child: Image.asset('assets/images/image1.jpeg'),
-                          ),
-                        ),
+                        MovieCard(imageFileName: 'image2'),
                         SizedBox(
                           width: defaultMargin,
                         ),
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(16),
-                          child: CustomContainer(
-                            backgroundColor: AppColor.blackColor(),
-                            containerType: RoundedContainerType.noOutline,
-                            height: 214,
-                            child: Image.asset('assets/images/image1.jpeg'),
-                          ),
-                        ),
+                        MovieCard(imageFileName: 'image1'),
                         SizedBox(
                           width: defaultMargin,
                         ),
@@ -370,27 +347,11 @@ class TabNowPlayingScreen extends StatelessWidget {
         children: [
           Row(
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(16),
-                child: CustomContainer(
-                  backgroundColor: AppColor.blackColor(),
-                  containerType: RoundedContainerType.noOutline,
-                  height: 214,
-                  child: Image.asset('assets/images/image1.jpeg'),
-                ),
-              ),
+              MovieCard(imageFileName: 'image2'),
               SizedBox(
                 width: defaultMargin,
               ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(16),
-                child: CustomContainer(
-                  backgroundColor: AppColor.blackColor(),
-                  containerType: RoundedContainerType.noOutline,
-                  height: 214,
-                  child: Image.asset('assets/images/image1.jpeg'),
-                ),
-              ),
+              MovieCard(imageFileName: 'image3'),
             ],
           ),
           SizedBox(
@@ -398,27 +359,11 @@ class TabNowPlayingScreen extends StatelessWidget {
           ),
           Row(
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(16),
-                child: CustomContainer(
-                  backgroundColor: AppColor.blackColor(),
-                  containerType: RoundedContainerType.noOutline,
-                  height: 214,
-                  child: Image.asset('assets/images/image1.jpeg'),
-                ),
-              ),
+              MovieCard(imageFileName: 'image1'),
               SizedBox(
                 width: defaultMargin,
               ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(16),
-                child: CustomContainer(
-                  backgroundColor: AppColor.blackColor(),
-                  containerType: RoundedContainerType.noOutline,
-                  height: 214,
-                  child: Image.asset('assets/images/image1.jpeg'),
-                ),
-              ),
+              MovieCard(imageFileName: 'image2'),
             ],
           ),
         ],
