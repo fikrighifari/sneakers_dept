@@ -28,8 +28,9 @@ class _HomeScreenState extends State<HomeScreen>
 
   customBottomNavBar() {
     return BottomNavigationBar(
-        selectedItemColor: AppColor.priceColor(),
-        unselectedItemColor: AppColor.whiteColor(),
+        backgroundColor: AppColor.backgroundColor1(),
+        selectedItemColor: AppColor.blueColor(),
+        unselectedItemColor: AppColor.grey1Color(),
         currentIndex: currentIndex!,
         onTap: (value) {},
         type: BottomNavigationBarType.fixed,
@@ -75,6 +76,13 @@ class _HomeScreenState extends State<HomeScreen>
               //     CircleAvatar()
               //   ],
               // ),
+              Text(
+                'What do you want to watch?',
+                style: defaultTextStyle.copyWith(
+                  color: AppColor.whiteColor(),
+                  fontSize: 18,
+                ),
+              ),
 
               //Filter
               // Row(
