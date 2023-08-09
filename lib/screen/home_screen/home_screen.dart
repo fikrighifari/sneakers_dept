@@ -365,15 +365,63 @@ class TabNowPlayingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(16),
-        child: CustomContainer(
-          backgroundColor: AppColor.blackColor(),
-          containerType: RoundedContainerType.noOutline,
-          height: 214,
-          child: Image.asset('assets/images/image1.jpeg'),
-        ),
+    return SingleChildScrollView(
+      child: Column(
+        children: [
+          Row(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: CustomContainer(
+                  backgroundColor: AppColor.blackColor(),
+                  containerType: RoundedContainerType.noOutline,
+                  height: 214,
+                  child: Image.asset('assets/images/image1.jpeg'),
+                ),
+              ),
+              SizedBox(
+                width: defaultMargin,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: CustomContainer(
+                  backgroundColor: AppColor.blackColor(),
+                  containerType: RoundedContainerType.noOutline,
+                  height: 214,
+                  child: Image.asset('assets/images/image1.jpeg'),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: defaultMargin,
+          ),
+          Row(
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: CustomContainer(
+                  backgroundColor: AppColor.blackColor(),
+                  containerType: RoundedContainerType.noOutline,
+                  height: 214,
+                  child: Image.asset('assets/images/image1.jpeg'),
+                ),
+              ),
+              SizedBox(
+                width: defaultMargin,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: CustomContainer(
+                  backgroundColor: AppColor.blackColor(),
+                  containerType: RoundedContainerType.noOutline,
+                  height: 214,
+                  child: Image.asset('assets/images/image1.jpeg'),
+                ),
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
