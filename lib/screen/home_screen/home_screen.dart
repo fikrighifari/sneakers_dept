@@ -35,14 +35,19 @@ class _HomeScreenState extends State<HomeScreen>
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.ac_unit),
-            activeIcon: Icon(Icons.ac_unit),
+            icon: Icon(Icons.home),
+            activeIcon: Icon(Icons.home),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.ac_unit),
-            activeIcon: Icon(Icons.ac_unit),
-            label: 'Wew',
+            icon: Icon(Icons.search),
+            activeIcon: Icon(Icons.search),
+            label: 'Search',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            activeIcon: Icon(Icons.favorite),
+            label: 'Watch List',
           ),
         ]);
   }
@@ -352,9 +357,15 @@ class TabNowPlayingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: Text(
-        '🐌🦄🦊🐸',
+    return Center(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(16),
+        child: CustomContainer(
+          backgroundColor: AppColor.blackColor(),
+          containerType: RoundedContainerType.noOutline,
+          height: 214,
+          child: Image.asset('assets/images/image1.jpeg'),
+        ),
       ),
     );
   }
