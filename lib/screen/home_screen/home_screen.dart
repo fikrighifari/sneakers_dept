@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:sneakers_dept/themes/color_themes.dart';
+import 'package:sneakers_dept/export.dart';
 import 'package:sneakers_dept/themes/themes.dart';
 import 'package:sneakers_dept/widgets/cards/movie_card.dart';
 import 'package:sneakers_dept/widgets/reusable_components/reusable_components.dart';
