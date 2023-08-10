@@ -345,7 +345,13 @@ class TabNowPlayingScreen extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
+          SizedBox(
+            height: defaultMargin,
+          ),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
             children: [
               MovieCard(imageFileName: 'image2'),
               SizedBox(
@@ -358,12 +364,15 @@ class TabNowPlayingScreen extends StatelessWidget {
             height: defaultMargin,
           ),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            mainAxisSize: MainAxisSize.min,
             children: [
-              MovieCard(imageFileName: 'image1'),
+              MovieCard(imageFileName: 'image4'),
               SizedBox(
                 width: defaultMargin,
               ),
-              MovieCard(imageFileName: 'image2'),
+              MovieCard(imageFileName: 'image5'),
             ],
           ),
         ],
