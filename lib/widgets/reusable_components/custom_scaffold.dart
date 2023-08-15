@@ -72,13 +72,13 @@ class CustomScaffold extends StatelessWidget {
             ? null
             : AppBar(
                 key: appbarKey,
-                backgroundColor: const Color(0xffFFFFFF),
+                backgroundColor: AppColor.backgroundColor4(),
                 leading: hideBackButton
                     ? null
                     : IconButton(
                         icon: Icon(
                           Icons.arrow_back_ios_new,
-                          color: AppColor.primaryColor(),
+                          color: AppColor.whiteColor(),
                         ),
                         onPressed: () {
                           if (isToHome) {
@@ -103,7 +103,7 @@ class CustomScaffold extends StatelessWidget {
                     : title.runtimeType.toString() == "String"
                         ? TextWidget.appBarTitle(
                             title!,
-                            color: AppColor.primaryColor(),
+                            color: AppColor.whiteColor(),
                             fontWeight: FontWeight.bold,
                           )
                         : title,
