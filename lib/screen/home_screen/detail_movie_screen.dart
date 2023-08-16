@@ -11,11 +11,11 @@ class DetailMovieScreen extends StatefulWidget {
 }
 
 class _DetailMovieScreenState extends State<DetailMovieScreen> {
-  final double coverHeight = 165;
+  final double coverHeight = 200;
   final double clockCardHeight = 140;
   @override
   Widget build(BuildContext context) {
-    final top = coverHeight - clockCardHeight / 2;
+    final top = coverHeight - clockCardHeight / 1.5;
 
     return CustomScaffold.withAppBar(
       backgroundColor: AppColor.backgroundColor4(),
@@ -25,12 +25,12 @@ class _DetailMovieScreenState extends State<DetailMovieScreen> {
         children: [
           Stack(clipBehavior: Clip.none, children: [
             ClipRRect(
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(30),
                 bottomRight: Radius.circular(30),
               ),
-              child: Container(
-                height: MediaQuery.of(context).size.height / 3,
+              child: SizedBox(
+                height: 200,
                 width: MediaQuery.of(context).size.width,
                 child: Image.asset(
                   'assets/images/image1.jpeg',
@@ -40,23 +40,24 @@ class _DetailMovieScreenState extends State<DetailMovieScreen> {
             ),
             Positioned(
               left: defaultMargin,
-              top: coverHeight,
+              top: top,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  MovieCard(imageFileName: 'image2'),
-                  SizedBox(
-                    width: 100,
-                  ),
+                  const MovieCard(imageFileName: 'image2'),
+
+                  // SizedBox(
+                  //   width: 100,
+                  // ),
                   Container(
-                    padding: EdgeInsets.symmetric(
+                    padding: const EdgeInsets.symmetric(
                       horizontal: 8,
                       vertical: 4,
                     ),
                     height: 24,
                     // width: 54,
                     color: AppColor.backgroundColor4(),
-                    child: Row(
+                    child: const Row(
                       children: [
                         Icon(
                           Icons.star,
@@ -73,9 +74,13 @@ class _DetailMovieScreenState extends State<DetailMovieScreen> {
               ),
             ),
           ]),
-          TextWidget(
-            'Spiderman No Way Home',
-            color: AppColor.whiteColor(),
+          Container(
+            margin: EdgeInsets.only(left: 170),
+            child: TextWidget(
+              'Spiderman No Way Home ',
+              color: AppColor.whiteColor(),
+              textAlign: TextAlign.left,
+            ),
           ),
         ],
       ),
