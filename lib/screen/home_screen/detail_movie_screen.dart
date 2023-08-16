@@ -1,4 +1,5 @@
 import 'package:sneakers_dept/export.dart';
+import 'package:sneakers_dept/themes/themes.dart';
 import 'package:sneakers_dept/widgets/cards/movie_card.dart';
 import 'package:sneakers_dept/widgets/reusable_components/reusable_components.dart';
 
@@ -10,15 +11,19 @@ class DetailMovieScreen extends StatefulWidget {
 }
 
 class _DetailMovieScreenState extends State<DetailMovieScreen> {
+  final double coverHeight = 165;
+  final double clockCardHeight = 140;
   @override
   Widget build(BuildContext context) {
+    final top = coverHeight - clockCardHeight / 2;
+
     return CustomScaffold.withAppBar(
       backgroundColor: AppColor.backgroundColor4(),
       centerTitle: true,
       title: 'Detail',
       child: Column(
         children: [
-          Stack(children: [
+          Stack(clipBehavior: Clip.none, children: [
             ClipRRect(
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(30),
@@ -33,32 +38,39 @@ class _DetailMovieScreenState extends State<DetailMovieScreen> {
                 ),
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                MovieCard(imageFileName: 'image2'),
-                Container(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: 8,
-                    vertical: 4,
+            Positioned(
+              left: defaultMargin,
+              top: coverHeight,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  MovieCard(imageFileName: 'image2'),
+                  SizedBox(
+                    width: 100,
                   ),
-                  height: 24,
-                  // width: 54,
-                  color: AppColor.backgroundColor4(),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.star,
-                        color: Colors.orange,
-                      ),
-                      TextWidget(
-                        '9.5',
-                        color: Colors.orange,
-                      )
-                    ],
+                  Container(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 8,
+                      vertical: 4,
+                    ),
+                    height: 24,
+                    // width: 54,
+                    color: AppColor.backgroundColor4(),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.star,
+                          color: Colors.orange,
+                        ),
+                        TextWidget(
+                          '9.5',
+                          color: Colors.orange,
+                        )
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ]),
           TextWidget(
